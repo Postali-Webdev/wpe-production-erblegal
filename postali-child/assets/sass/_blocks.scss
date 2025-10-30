@@ -1,0 +1,236 @@
+.review-wrapper {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    background-color: $lt-blue;
+    padding: 80px 0 !important;
+    @include respond(screen-ipad) {
+        background-size: cover;
+    }
+    @include respond(screen-xs) {
+        padding: 40px 0 !important;
+    }
+    .columns {
+        @include respond(screen-ipad) {
+            flex-direction: column;
+        }
+        .column-50 {
+            @include respond(screen-ipad) {
+                width: 100%;
+            }
+            &:first-of-type {
+                padding-left: 180px;
+                @include respond(screen-ipad) {
+                    padding: 0 30px;
+                }
+            }
+            &:last-of-type {
+                padding-right: 180px;
+                @include respond(screen-ipad) {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+    .title-wrapper {
+        display: flex;
+        margin-top: 30px;
+        .quote {
+            font-family: $roboto;
+            font-size: 52px;
+            line-height: 55px;
+            position: relative;
+            left: -18px;
+        }
+        h2 {
+            position: relative;
+            left: -18px;
+        }
+    }
+    .review-logo {
+        margin-bottom: 20px;
+    }   
+}
+
+.recent-posts-wrapper, .posts-wrapper, .videos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 0 40px;
+    @include respond(screen-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.25em;
+    }
+    @include respond(screen-xs) {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+    }
+    .recent-post, .post, .video {
+        background: $white;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            &.date {
+                color: $red;
+                font-weight: bold;
+                padding: 25px 0 15px 0 !important;
+            }
+        }
+        h2 {
+            margin-bottom: 15px !important;
+        }
+        .title, .category, .category a, .blog-link {
+            color: $dk-blue;
+        }
+        .title {
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: $bold;
+            font-family: $roboto;
+            text-transform: capitalize;
+        }
+        .blog-link {
+            margin: 60px auto 30px auto;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    }
+}
+
+.closing-cta-block {
+    max-width: 820px;
+    padding: 0 40px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+        padding-bottom: 0 !important;
+    }
+    .sub-title {
+        padding: 25px 0 !important;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+.awards-block {
+    background: $blue;
+    padding: 45px;
+    .title-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 50px;
+        .dual-fonts {
+            padding-bottom: 0 !important;
+            margin-right: 50px;
+            @include respond(screen-xxs) {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        .line-ruler {
+            width: 100%;
+            height: 0.5px;
+            background: $grey;
+            opacity: 0.5;
+            width: calc(100% - 400px);
+        }
+    }
+    .awards-outer-wrapper {
+        @include respond(screen-xxs) {
+            padding-top: 50px;
+        }
+        .awards-inner-wrapper {
+            .award {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 20px;
+                img {
+                    width: 250px;
+                    height: 200px;
+                    object-fit: contain;
+                    margin: 0 auto;
+                }
+                p {
+                    text-align: center;
+                    padding: 30px 0 0 0;
+                }
+            }
+            .slick-arrow {
+                position: absolute;
+                top: -70px;
+                background: $red;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include respond(screen-xxs) {
+                    top: -50px;
+                }
+                &:before {
+                    position: absolute;
+                    display: block;
+                    color: $white;
+                    transform: scaleY(2);
+                    font-size: 25px;
+                    top: 10px;
+                    font-weight: $bold;
+                }
+                &.slick-prev {
+                    right: 100px;
+                    left: unset;
+                    @include respond(screen-xxs) {
+                        right: unset;
+                        left: 20%;
+                    }
+                    &:before {
+                        content: "<" !important;
+                        right: 20px;
+                    }
+                }
+                &.slick-next {
+                    right: 20px;
+                    @include respond(screen-xxs) {
+                        right: 20%;
+                    }
+                    &:before {
+                        content: ">" !important;
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.simple-banner {
+    position: relative;
+    padding-top: 10px;
+    .columns {
+        text-align: center;
+        h1 {
+            padding-top: 30px;
+        }
+        .sub-title {
+            padding-bottom: 30px !important;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(47, 62, 91,0) 0%, rgba(47, 62, 91,0.9) 100%);
+    }
+}

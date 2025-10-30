@@ -1,0 +1,196 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    #menu-footer-menu {
+        list-style-type: none !important;
+
+        li {
+            display: inline;
+            margin: 0 5px 0 0;
+
+            a {
+                color: $dk-blue;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 16px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:not(:last-child) {
+                a {
+                    &::after {
+                        content: "|";
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include respond(screen-sm) {
+            flex-direction: column;
+        }
+        .left-col  {
+            width: 23%;
+            @include respond(screen-sm) {
+                width: auto;
+            }
+            .custom-logo-link {
+                background: $white;
+                display: block;
+                padding: 25px;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                img {
+                    height: 74px;
+                    max-width: 340px;
+                    margin: 0 auto;
+                }
+            }
+            a.btn {
+                margin: 26px 0 26px 40px;
+            }
+        }
+        .right-col {
+            width: 73%;
+            padding: 0 40px;
+            @include respond(screen-sm) {
+                width: auto;
+            }
+            .location-grid {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .location {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+
+                    @include respond(screen-ipad) {
+                        width: 46%;
+                    }
+
+                    @include respond(screen-xxs) {
+                        width: 100%;
+                        margin:0 0 40px !important;
+
+                        &:not(:last-of-type) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-right: 4%;
+                    }
+
+                    .copy-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        margin-bottom: 20px;
+                        width: 25%;
+
+                        a {
+                            display: block;
+                            color: $dk-blue;
+                            font-weight: $normal;
+                            &.directions {
+                                font-weight: $bold;
+                                position: relative;
+                                width: -webkit-fit-content;
+                                width: -moz-fit-content;
+                                width: fit-content;
+                                padding-right: 35px;
+                                text-decoration: none;
+                                &:after {
+                                    content: "";
+                                    display: block;
+                                    width: 10px;
+                                    height: 10px;
+                                    margin-left: 3px;
+                                    background-image: url('/wp-content/uploads/2023/06/secondary-link-style-arrow.svg');
+                                    background-repeat: no-repeat;
+                                    background-size: 40%;
+                                    background-position: center center;
+                                    background-color: $red;
+                                    padding: 8px;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                }
+                            }
+                        }
+                        .sm-title {
+                            @include respond(screen-xs) {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+
+                    .responsive-iframe {
+                        position: relative;
+                        overflow: hidden;
+                        width: 70%;
+                        height: 200px;
+                        margin-top: 50px;
+                        padding-top: 0;
+                    }
+                }
+            }
+            .copyright {
+                margin-top: 30px;
+
+                .copyright-links {
+                    p.sm-title {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding-top: 0;
+                        padding-bottom: 0 !important;
+                    }
+
+                    #menu-footer-menu {
+                        li {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                .social-wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .dual-fonts {
+                        display: inline;
+                        margin-right: 10px;
+                        padding-bottom: 0 !important;
+                    }
+                    .social-icon {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin: 0 5px;
+                    }
+                }
+                .disclaimer {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

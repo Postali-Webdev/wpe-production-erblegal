@@ -1,0 +1,147 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+
+ul, ol {
+    margin-left: 0 !important;
+    padding-bottom: 30px !important;
+    li {
+        margin: 0 0 0 20px;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 5px;
+        font-family: $roboto;
+        a {
+            font-weight: $normal;
+            font-size: 18px;
+            line-height: 30px;
+            padding-bottom: 5px;
+            font-family: $roboto;
+        }
+    }
+}
+
+h1 {
+    font-family: $roboto;
+    font-size: 70px;
+    line-height: 75px;
+    text-transform: capitalize;
+    color: $white;
+    @include respond(screen-sm) {
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+h2 {
+    font-family: $roboto;
+    font-size: 52px;
+    line-height: 55px;
+    padding-bottom: 33px !important;
+    @include respond(screen-sm) {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+h3 {
+    font-family: $roboto;
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 33px !important;
+    @include respond(screen-sm) {
+        font-size: 28px
+    }
+}
+
+h4 {
+    color: $white;
+    font-size: 18px;
+    font-family: $roboto;
+    padding-bottom: 33px !important;
+}
+
+a {
+    text-decoration:none;
+    -webkit-transition:$trans;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 40px;
+    text-transform: uppercase !important;
+    text-decoration:none;
+    transition:$trans;
+    border: solid 2px $dk-red;
+    &:hover {
+        background-color:$dk-red;
+        border: solid 2px $white;
+    }
+}
+
+p {
+    font-size:22px;
+    line-height: 36px;
+    margin-bottom:30px;
+    padding-bottom: 30px !important;
+    &.sub-title {
+        font-size: 28px;
+        font-weight: $light;
+        padding: 20px 0 !important; 
+        @include respond(screen-xs) {
+            font-size: 24px;
+        }
+    }
+    &.large {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: $bold;
+    }
+    &.title {
+        text-transform: uppercase;
+        font-weight: $bold;
+        padding-bottom: 15px !important;
+    }
+}
+
+.dual-fonts {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    .cursive-text {
+        font-family: $haviland;
+        font-style: italic;
+        text-transform: lowercase;
+        font-size: 56px;
+        font-weight: 400;
+        padding-right: 8px;
+    }
+    .red {
+        color: $red;
+    }
+    .blue {
+        color: $blue;
+    }
+}
+
+.big-text, .big-text a {
+    font-size: 28px;
+    font-weight: $light;
+    @include respond(screen-xs) {
+        font-size: 24px;
+    }
+}
+.big-text a {
+    font-weight: $bold;
+}

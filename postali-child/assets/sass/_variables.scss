@@ -1,0 +1,61 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$screen-xxxl: 1920px;
+$screen-xxl: 1640px;
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-ipad: 1024px;
+$screen-md: 992px;
+$screen-sm: 820px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+
+// Containers
+$container-max-width: $screen-xxl;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$blk: #000000;
+$grey: #ededed;
+$lt-grey: #efefef;
+$white: #FFFFFF;
+$dk-red: #b3322c;
+$red: #e34040;
+$dk-blue: #2f3e5b;
+$blue: #3e527a;
+$off-blue: #415377;
+$lt-blue: #477bc1;
+$dk-grey: #515c72;
+
+// Link Attributes
+// $link-color: $lt-red;
+// $link-hover-color: $grey;
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Typography
+$roboto: 'Roboto', sans-serif;
+$haviland: 'Mr De Haviland', serif;
+$icomoon: 'Icomoon';
+
+// $body-font-family: $overpass;
+// $body-text-color: $dk-blue;
+$body-line-height: 130%;
+
+// Font Weight
+$light: 100;
+$normal: 400;
+$bold: 700; 
+$black: 900;
