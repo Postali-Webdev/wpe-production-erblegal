@@ -81,7 +81,9 @@ $map_embed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12019.0900134
 
                 <div class="copyright-links"> 
                     <p class="red sm-title">Site Navigation</p>
+                    <nav>
                     <?php wp_nav_menu( [ 'container' => false, 'theme_location' => 'footer-nav' ] ); ?> 
+                    </nav>
                 </div>
 
                 <?php if(is_page_template('front-page.php')) { ?>
