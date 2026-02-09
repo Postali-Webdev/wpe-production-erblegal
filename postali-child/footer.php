@@ -99,7 +99,10 @@ $map_embed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12019.0900134
     <script type="text/javascript" src="//cdn.callrail.com/companies/766141035/57b3c6f3970354d413fe/12/swap.js"></script>
 
     <!-- chat script -->
-    <script src="https://blazeo.com/scripts/invitation.ashx?company=erblegal" async></script> 
+    <!-- <script src="https://blazeo.com/scripts/invitation.ashx?company=erblegal" async></script>  -->
+
+    <!-- live chat -->
+    <script src="https://lexidesk.ai/load-widget.js" data-widget-url="https://lexidesk.ai/widget?agentJwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudElkIjozOCwiaWF0IjoxNzcwNjQ2MzcwfQ.2xkta2dod5nj46i_WS05d_lRoBr-4cSiLIPRlXWjUKM"></script>
 
     <?php wp_footer(); ?>
 
